@@ -398,7 +398,7 @@ const PURCHASE_REQUESTS: PurchaseRequestSeed[] = [
     title: "توريد زيت قلي نباتي للفرع الرئيسي",
     notes: "زيت قلي عميق للاستخدام اليومي في المطبخ.",
     neededByDate: "2026-11-18",
-    submissionDeadline: "2026-11-13T15:00:00Z",
+    submissionDeadline: "2026-11-04T15:00:00Z",
     publishedAt: "2026-11-02T08:00:00Z",
     finalStatus: "published",
     items: [

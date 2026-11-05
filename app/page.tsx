@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { BrandWatermark, Mark } from "@/components/ui";
 import { Badge } from "@/components/ui";
+import { CountUp, LiveDealPanel } from "@/components/landing-live";
 
 export default function HomePage() {
   return (
-    <main className="public-shell">
+    <main className="public-shell landing-light">
       <BrandWatermark />
       <div className="ambient-grid" aria-hidden />
       <div className="ambient-glow" aria-hidden />
@@ -54,124 +55,25 @@ export default function HomePage() {
         </div>
 
         <div className="hero-stage">
-          <div className="deal-visual floating-panel">
-            <div className="visual-top">
-              <div>
-                <div className="live-pulse">
-                  <span className="live-dot" />
-                  منافسة مباشرة
-                </div>
-                <h3>طلب توريد · أرز بسمتي · الرياض</h3>
-                <p>RFQ-2841 · يغلق خلال</p>
-              </div>
-              <div className="countdown">
-                <strong>02</strong>
-                <strong>14</strong>
-                <small>ساعة</small>
-                <small>دقيقة</small>
-              </div>
-            </div>
-
-            <div className="ticker-strip" aria-hidden>
-              <span>عرض جديد +٣٫٢٪</span>
-              <span>مورد #4 دخل المنافسة</span>
-              <span>أفضل سعر ↓ ٤٫٨٪</span>
-              <span>ترتيب محدّث</span>
-            </div>
-
-            <div className="visual-stats">
-              <div>
-                <small>عروض نشطة</small>
-                <strong>12</strong>
-                <span>موردون يتنافسون</span>
-              </div>
-              <div>
-                <small>أفضل سعر</small>
-                <strong>١٨٫٤</strong>
-                <span>ر.س / كجم</span>
-              </div>
-              <div>
-                <small>انخفاض</small>
-                <strong className="delta-down">−١١٪</strong>
-                <span>منذ الافتتاح</span>
-              </div>
-            </div>
-
-            <div className="rank-panel">
-              <div className="rank-row is-lead">
-                <span className="rank-pos">١</span>
-                <div>
-                  <strong>مؤسسة النخيل للتوريد</strong>
-                  <small>تسليم ٧ أيام · تقييم ٩٤</small>
-                </div>
-                <b>١٨٫٤٠</b>
-              </div>
-              <div className="rank-row">
-                <span className="rank-pos">٢</span>
-                <div>
-                  <strong>شركة آفاق اللوجستية</strong>
-                  <small>تسليم ١٠ أيام · تقييم ٩١</small>
-                </div>
-                <b>١٨٫٩٥</b>
-              </div>
-              <div className="rank-row">
-                <span className="rank-pos">٣</span>
-                <div>
-                  <strong>مجموعة البركة</strong>
-                  <small>تسليم ٥ أيام · تقييم ٨٨</small>
-                </div>
-                <b>١٩٫٢٠</b>
-              </div>
-            </div>
-
-            <div className="sparkline" aria-hidden>
-              <svg viewBox="0 0 320 64" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="rgba(201,169,110,.35)" />
-                    <stop offset="100%" stopColor="rgba(201,169,110,0)" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,48 C40,46 60,40 90,36 C120,32 140,28 170,22 C200,16 230,24 260,14 C290,6 310,10 320,8 L320,64 L0,64 Z"
-                  fill="url(#sparkFill)"
-                />
-                <path
-                  d="M0,48 C40,46 60,40 90,36 C120,32 140,28 170,22 C200,16 230,24 260,14 C290,6 310,10 320,8"
-                  fill="none"
-                  stroke="var(--gold)"
-                  strokeWidth="2.2"
-                />
-              </svg>
-              <small>اتجاه السعر أثناء المنافسة</small>
-            </div>
-
-            <div className="visual-note">
-              <span className="shield">◆</span>
-              <div>
-                <strong>العروض مشفّرة حتى الإغلاق</strong>
-                <small>ترسية موثقة · مقارنة ذكية · أثر تدقيقي كامل</small>
-              </div>
-            </div>
-          </div>
+          <LiveDealPanel />
         </div>
       </section>
 
       <section className="numbers">
         <div>
-          <strong>٣٫٢×</strong>
+          <CountUp to={3.2} digits={1} suffix="×" />
           <span>متوسط عدد العروض لكل طلب</span>
         </div>
         <div>
-          <strong>١٨٪</strong>
+          <CountUp to={18} suffix="%" />
           <span>توفير متوسط عبر المنافسة</span>
         </div>
         <div>
-          <strong>&lt; ٤٨س</strong>
+          <CountUp to={48} prefix="< " suffix="س" />
           <span>من الطلب إلى أفضل عرض</span>
         </div>
         <div>
-          <strong>١٠٠٪</strong>
+          <CountUp to={100} suffix="%" />
           <span>مسار قرار قابل للتدقيق</span>
         </div>
       </section>
@@ -225,7 +127,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="chat buyer-chat">
-            أحتاج ٤٠ طن أرز بسمتي للرياض خلال ١٠ أيام، جودة تصدير.
+            أحتاج 40 طن أرز بسمتي للرياض خلال 10 أيام، جودة تصدير.
           </div>
           <div className="chat ai-chat">
             <strong>تم تجهيز طلب الشراء</strong>
@@ -236,7 +138,7 @@ export default function HomePage() {
           <div className="extracted">
             <span>
               الكمية
-              <b>٤٠ طن</b>
+              <b>40 طن</b>
             </span>
             <span>
               المدينة
@@ -244,7 +146,7 @@ export default function HomePage() {
             </span>
             <span>
               الموعد
-              <b>١٠ أيام</b>
+              <b>10 أيام</b>
             </span>
           </div>
         </div>
