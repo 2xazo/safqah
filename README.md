@@ -10,6 +10,8 @@ Built for the Meta AMET AI Awards 2026 by Abdulaziz Al-Othman (Meta 2026 AI Acad
 
 The five slide pitch deck is in [`docs/Safqah-Pitch-Deck.pdf`](docs/Safqah-Pitch-Deck.pdf).
 
+The demo video is in [`docs/Safqah-Demo-Video.mp4`](docs/Safqah-Demo-Video.mp4).
+
 ## How it works
 
 1. **Describe the need.** The buyer types a request the way they would text a supplier, for example *“I need 50 cartons of oil for the restaurant in Riyadh before Thursday”* (written in Saudi Arabic).
